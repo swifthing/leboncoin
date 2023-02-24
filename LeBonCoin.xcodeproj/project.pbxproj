@@ -32,9 +32,9 @@
 		E95D0B6D29A0FE7E001C31F4 /* Networkr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D0B6C29A0FE7E001C31F4 /* Networkr.swift */; };
 		E95D0B6F29A1058C001C31F4 /* LBCEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D0B6E29A1058C001C31F4 /* LBCEndpoint.swift */; };
 		E982BB2429A8DADF004CC066 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2329A8DADF004CC066 /* String+Extension.swift */; };
-		E982BB2629A8F9A1004CC066 /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2529A8F9A1004CC066 /* Categorie.swift */; };
+		E982BB2629A8F9A1004CC066 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2529A8F9A1004CC066 /* Category.swift */; };
 		E982BB2829A8F9D2004CC066 /* CategoriesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2729A8F9D2004CC066 /* CategoriesAdapter.swift */; };
-		E982BB2A29A8FA00004CC066 /* CategorieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2929A8FA00004CC066 /* CategorieDTO.swift */; };
+		E982BB2A29A8FA00004CC066 /* CategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2929A8FA00004CC066 /* CategoryDTO.swift */; };
 		E982BB2C29A8FD34004CC066 /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982BB2B29A8FD34004CC066 /* CategoriesRepository.swift */; };
 		E9A14B7529A73A5E008045CC /* MockAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E9A14B7429A73A5E008045CC /* MockAPI.json */; };
 		E9A14B7629A73A5E008045CC /* MockAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E9A14B7429A73A5E008045CC /* MockAPI.json */; };
@@ -88,9 +88,9 @@
 		E95D0B6C29A0FE7E001C31F4 /* Networkr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkr.swift; sourceTree = "<group>"; };
 		E95D0B6E29A1058C001C31F4 /* LBCEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCEndpoint.swift; sourceTree = "<group>"; };
 		E982BB2329A8DADF004CC066 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		E982BB2529A8F9A1004CC066 /* Categorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categorie.swift; sourceTree = "<group>"; };
+		E982BB2529A8F9A1004CC066 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E982BB2729A8F9D2004CC066 /* CategoriesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAdapter.swift; sourceTree = "<group>"; };
-		E982BB2929A8FA00004CC066 /* CategorieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieDTO.swift; sourceTree = "<group>"; };
+		E982BB2929A8FA00004CC066 /* CategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDTO.swift; sourceTree = "<group>"; };
 		E982BB2B29A8FD34004CC066 /* CategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
 		E9A14B7429A73A5E008045CC /* MockAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAPI.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,8 +221,8 @@
 			children = (
 				E95D0B5C29A01CE2001C31F4 /* ClassifiedAd.swift */,
 				E9138C9D29A79A8A0047026E /* ClassifiedAdDTO.swift */,
-				E982BB2529A8F9A1004CC066 /* Categorie.swift */,
-				E982BB2929A8FA00004CC066 /* CategorieDTO.swift */,
+				E982BB2529A8F9A1004CC066 /* Category.swift */,
+				E982BB2929A8FA00004CC066 /* CategoryDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,8 +400,8 @@
 				E95D0B6A29A0FE45001C31F4 /* AdCellViewModel.swift in Sources */,
 				E95D0B6F29A1058C001C31F4 /* LBCEndpoint.swift in Sources */,
 				E9138CA029A7A28F0047026E /* ClassifiedAdsRepository.swift in Sources */,
-				E982BB2A29A8FA00004CC066 /* CategorieDTO.swift in Sources */,
-				E982BB2629A8F9A1004CC066 /* Categorie.swift in Sources */,
+				E982BB2A29A8FA00004CC066 /* CategoryDTO.swift in Sources */,
+				E982BB2629A8F9A1004CC066 /* Category.swift in Sources */,
 				E95D0B6D29A0FE7E001C31F4 /* Networkr.swift in Sources */,
 				E982BB2429A8DADF004CC066 /* String+Extension.swift in Sources */,
 				E95D0B25299FD278001C31F4 /* AppDelegate.swift in Sources */,

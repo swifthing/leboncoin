@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeViewModel: ObservableObject {
     @Published var classifiedAds: [ClassifiedAd] = []
-    var categoriesList: [Categorie] = []
+    var categoriesList: [Category] = []
 
     var classifiedAdsRepository: ClassifiedAdsRepositoryProtocol
     var categoriesRepository: CategoriesRepositoryProtocol

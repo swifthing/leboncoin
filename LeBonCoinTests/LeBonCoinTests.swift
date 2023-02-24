@@ -123,25 +123,25 @@ fileprivate final class MockAdsRepository: ClassifiedAdsRepositoryProtocol {
     }
 }
 
-extension Categorie: Equatable {
-    public static func == (lhs: Categorie, rhs: Categorie) -> Bool {
+extension ClassifiedAd: Equatable {
+    public static func == (lhs: ClassifiedAd, rhs: ClassifiedAd) -> Bool {
         lhs.id == rhs.id
     }
 }
 
 fileprivate final class MockCategorieRepository: CategoriesRepositoryProtocol {
 
-    let categories: [Categorie] = [Categorie(id: 1, name: "title1"),
-                                   Categorie(id: 2, name: "title2")]
+    let categories: [LeBonCoin.Category] = [Category(id: 1, name: "title1"),
+                                  Category(id: 2, name: "title2")]
 
 
-    func fetch() -> [Categorie] {
+    func fetch() -> [LeBonCoin.Category] {
         categories
     }
 }
 
-extension ClassifiedAd: Equatable {
-    public static func == (lhs: ClassifiedAd, rhs: ClassifiedAd) -> Bool {
+extension LeBonCoin.Category: Equatable {
+    public static func == (lhs: LeBonCoin.Category, rhs: LeBonCoin.Category) -> Bool {
         lhs.id == rhs.id
     }
 }

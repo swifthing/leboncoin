@@ -12,7 +12,7 @@ final class AdCell: UITableViewCell {
     static let identifier: String = "cell"
 
     let viewModel: AdCellViewModel
-    var categoriesList: [Categorie] = []
+    var categoriesList: [Category] = []
     var adCell: ClassifiedAd!
 
     private let imgAd: UIImageView = {

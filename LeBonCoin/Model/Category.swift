@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Categorie {
+struct Category {
     var id: Int
     var name: String
 }

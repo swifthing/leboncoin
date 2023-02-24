@@ -8,8 +8,8 @@
 import Foundation
 
 struct CategoriesdAdapter {
-    func transform(_ dto: CategorieDTO) -> Categorie {
-        Categorie(id: dto.id,
+    func transform(_ dto: CategoryDTO) -> Category {
+        Category(id: dto.id,
                   name: dto.name)
     }
 }

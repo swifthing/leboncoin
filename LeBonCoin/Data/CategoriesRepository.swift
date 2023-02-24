@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CategoriesRepositoryProtocol {
-    func fetch () async throws -> [Categorie]
+    func fetch () async throws -> [Category]
 }
 
 struct CategoriesRepository: CategoriesRepositoryProtocol {
@@ -23,8 +23,8 @@ struct CategoriesRepository: CategoriesRepositoryProtocol {
         self.adapter = adapter
     }
 
-    func fetch () async throws -> [Categorie] {
-        let categoriesDTO: [CategorieDTO] = try await networkr.fetchData(request)
+    func fetch () async throws -> [Category] {
+        let categoriesDTO: [CategoryDTO] = try await networkr.fetchData(request)
         return categoriesDTO.map(adapter.transform)
     }
 }
