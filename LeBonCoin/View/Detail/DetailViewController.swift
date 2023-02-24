@@ -31,6 +31,7 @@ final class DetailViewController: UIViewController {
         img.translatesAutoresizingMaskIntoConstraints = false
         img.image = UIImage(named: "imagePlaceholder".localized)
         img.layer.cornerRadius = 4
+        img.sizeToFit()
         return img
     }()
 
