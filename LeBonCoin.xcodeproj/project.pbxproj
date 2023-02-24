@@ -587,6 +587,7 @@
 				DEVELOPMENT_TEAM = UP2A3RVFX4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeBonCoin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Leboncoin;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -618,6 +619,7 @@
 				DEVELOPMENT_TEAM = UP2A3RVFX4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeBonCoin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Leboncoin;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
