@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LeBonCoin
+
+  Created by Anis on 23/02/2023.
+  
+*/
+
+// HomeView
+"HomeViewTitle" = "Leboncoin";
+"imagePlaceholder" = "placeholder";
