@@ -114,9 +114,10 @@ final class LeBonCoinTests: XCTestCase {
 
 fileprivate final class MockAdsRepository: ClassifiedAdsRepositoryProtocol {
 
-    let classifiedAd: [ClassifiedAd] = [ClassifiedAd(id: 0, category_id: 0, title: "", description: "", price: 1),
-                                        ClassifiedAd(id: 1, category_id: 2, title: "", description: "", price: 2),
-                                        ClassifiedAd(id: 3, category_id: 3, title: "", description: "", price: 3)]
+    let classifiedAd: [ClassifiedAd] = [
+        ClassifiedAd(id: 0, category_id: 0, title: "", description: "", price: 1, creation_date: "", is_urgent: true),
+        ClassifiedAd(id: 1, category_id: 2, title: "", description: "", price: 2, creation_date: "", is_urgent: true),
+        ClassifiedAd(id: 3, category_id: 3, title: "", description: "", price: 3, creation_date: "", is_urgent: true)]
 
     func fetch() -> [ClassifiedAd] {
         classifiedAd
