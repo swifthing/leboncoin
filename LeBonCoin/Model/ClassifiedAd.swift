@@ -15,8 +15,22 @@ struct ClassifiedAd {
     var price: Double
     var imageSmall: String?
     var imageThumb: String?
+    var creation_date: String
+    var is_urgent: Bool
 
     var image: String? {
         imageSmall ?? imageThumb ?? nil
+    }
+
+    var creationDate: String? {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss+0000" // 2019-11-05T15:56:55+0000
+        let showDate = inputFormatter.date(from: creation_date)
+        if let showDate {
+            inputFormatter.dateFormat = "dd/MM/yyyy"
+            let stringDate = inputFormatter.string(from: showDate)
+            return stringDate
+        }
+        return nil
     }
 }

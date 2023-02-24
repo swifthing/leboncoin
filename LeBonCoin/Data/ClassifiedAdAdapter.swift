@@ -15,6 +15,8 @@ struct ClassifiedAdAdapter {
                      description: dto.description,
                      price: dto.price,
                      imageSmall: dto.images_url.small,
-                     imageThumb: dto.images_url.thumb)
+                     imageThumb: dto.images_url.thumb,
+                     creation_date: dto.creation_date,
+                     is_urgent: dto.is_urgent)
     }
 }

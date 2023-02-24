@@ -53,6 +53,17 @@ final class AdCell: UITableViewCell {
         return label
     }()
 
+    private let urgentAd: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.backgroundColor = .orange
+        label.textColor = .white
+        return label
+    }()
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -72,6 +83,7 @@ final class AdCell: UITableViewCell {
         setupTitleView()
         setupPriceView()
         setupCategoryView()
+        setupUrgentView()
     }
 
     private func setupImageView () {
@@ -112,9 +124,15 @@ final class AdCell: UITableViewCell {
     private func setupCategoryView () {
         contentView.addSubview(categoryAd)
         categoryAd.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 3).isActive = true
-        categoryAd.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -3).isActive = true
         categoryAd.topAnchor.constraint(equalTo: priceAd.bottomAnchor, constant: 5).isActive = true
-        categoryAd.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
         categoryAd.text = categoriesList.filter { $0.id == adCell.category_id }.first?.name
+    }
+
+    private func setupUrgentView () {
+        contentView.addSubview(urgentAd)
+        urgentAd.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5).isActive = true
+        urgentAd.topAnchor.constraint(equalTo: categoryAd.bottomAnchor, constant: 5).isActive = true
+        urgentAd.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
+        urgentAd.text = adCell.is_urgent ? "Urgent" : ""
     }
 }

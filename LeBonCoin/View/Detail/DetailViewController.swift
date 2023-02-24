@@ -64,6 +64,26 @@ final class DetailViewController: UIViewController {
         return label
     }()
 
+    private let dateAd: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .gray
+        return label
+    }()
+
+    private let urgentAd: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.backgroundColor = .orange
+        label.textColor = .white
+        return label
+    }()
+
     private let descriptionAd: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -83,13 +103,14 @@ final class DetailViewController: UIViewController {
 
     private func setupViews () {
         view.backgroundColor = .white
-        title = itemAd?.title
         setupScrollView()
         setupContainerView()
         setupImageView()
         setupTitleView()
         setupPriceView()
         setupCategoryView()
+        setupDateView()
+        setupUrgentView()
         setupDescriptionView()
     }
 
@@ -112,10 +133,17 @@ final class DetailViewController: UIViewController {
         scrollStackViewContainer.addArrangedSubview(titleAd)
         scrollStackViewContainer.addArrangedSubview(priceAd)
         scrollStackViewContainer.addArrangedSubview(categoryAd)
+        scrollStackViewContainer.addArrangedSubview(dateAd)
+        scrollStackViewContainer.addArrangedSubview(urgentAd)
         scrollStackViewContainer.addArrangedSubview(descriptionAd)
     }
 
     private func setupImageView () {
+        if let img = itemAd?.image, let url = URL(string: img) {
+            Task {
+                imgAd.image = try await viewModel.getImage(from: .remote(url))
+            }
+        }
         imgAd.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
 
@@ -130,6 +158,18 @@ final class DetailViewController: UIViewController {
     private func setupCategoryView () {
         if let categorie = (categoriesList.filter { $0.id == itemAd?.category_id }.first?.name) {
             categoryAd.text = "Catégorie: " + categorie
+        }
+    }
+
+    private func setupDateView () {
+        if let date = itemAd?.creationDate {
+            dateAd.text = "Publiée le " + date
+        }
+    }
+
+    private func setupUrgentView () {
+        if let urgent = itemAd?.is_urgent {
+            urgentAd.text = urgent ? "Urgent" : ""
         }
     }
 

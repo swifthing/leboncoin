@@ -14,6 +14,8 @@ struct ClassifiedAdDTO: Codable, Equatable {
     var description: String
     var price: Double
     var images_url: ImagesUrl
+    var creation_date: String
+    var is_urgent: Bool
 
     struct ImagesUrl: Codable {
         var small: String?
