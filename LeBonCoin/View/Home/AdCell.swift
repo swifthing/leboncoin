@@ -72,6 +72,7 @@ final class AdCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         viewModel = AdCellViewModel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
     }
 
     func setValueForAdCell (adCell: ClassifiedAd) {
