@@ -38,6 +38,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         detailVC.itemAd = viewModel.classifiedAds[indexPath.row]
+        detailVC.categoriesList = viewModel.categoriesList
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
@@ -50,7 +51,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AdCell.identifier, for: indexPath) as! AdCell
         cell.setValueForAdCell(adCell: viewModel.classifiedAds[indexPath.row])
-//        cell.categoriesList = viewModel.categoriesList
+        cell.categoriesList = viewModel.categoriesList
         return cell
     }
 

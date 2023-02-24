@@ -29,6 +29,7 @@ final class AdCell: UITableViewCell {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
+        label.textColor = .black
         return label
     }()
 
@@ -37,7 +38,18 @@ final class AdCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.textColor = .black
+        return label
+    }()
+
+    private let categoryAd: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .gray
         return label
     }()
 
@@ -59,6 +71,7 @@ final class AdCell: UITableViewCell {
         setupImageView()
         setupTitleView()
         setupPriceView()
+        setupCategoryView()
     }
 
     private func setupImageView () {
@@ -93,7 +106,15 @@ final class AdCell: UITableViewCell {
         contentView.addSubview(priceAd)
         priceAd.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 3).isActive = true
         priceAd.topAnchor.constraint(equalTo: titleAd.bottomAnchor, constant: 5).isActive = true
-        priceAd.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
         priceAd.text = adCell.price.currency
+    }
+
+    private func setupCategoryView () {
+        contentView.addSubview(categoryAd)
+        categoryAd.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 3).isActive = true
+        categoryAd.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -3).isActive = true
+        categoryAd.topAnchor.constraint(equalTo: priceAd.bottomAnchor, constant: 5).isActive = true
+        categoryAd.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
+        categoryAd.text = categoriesList.filter { $0.id == adCell.category_id }.first?.name
     }
 }
